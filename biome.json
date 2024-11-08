@@ -4,8 +4,8 @@
 		"enabled": false
 	},
 	"files": {
-		"ignore": ["node_modules/**/*"],
-		"include": ["src/**/*"]
+		"ignore": ["node_modules/**/*", "dist/**/*"],
+		"include": ["**/*"]
 	},
 	"linter": {
 		"enabled": true,
@@ -17,7 +17,8 @@
 				"useNumberNamespace": "off",
 				"useNodeAssertStrict": "off",
 				"useNodejsImportProtocol": "off",
-				"noInferrableTypes": "warn"
+				"noInferrableTypes": "warn",
+				"noParameterAssign": "off"
 			},
 			"correctness": {
 				"noUnusedImports": "warn",
@@ -25,6 +26,13 @@
 			},
 			"complexity": {
 				"noBannedTypes": "off"
+			},
+			"suspicious": {
+				"noExplicitAny": "off",
+				"noAsyncPromiseExecutor": "off"
+			},
+			"performance": {
+				"noDelete": "off"
 			}
 		}
 	},
@@ -34,6 +42,7 @@
 			"semicolons": "always",
 			"indentWidth": 2,
 			"quoteStyle": "double",
+			"lineWidth": 120,
 			"lineEnding": "lf",
 			"indentStyle": "tab"
 		}
